@@ -5,8 +5,8 @@ A Python tool for simulating `missing slides, wrong sequence, and mixed axis` is
 
 ###  Setup
 ```bash
-git clone https://github.com/ConfidenceRaymond/NeuroGlitch.git
-cd NeuroGlitch
+git clone https://github.com/AondonaMoses/NIftI-SimViz.git
+cd NIftI-SimViz
 pip install -r requirements.txt
 
 ```
@@ -27,7 +27,7 @@ Combinining the `single mode` and `single_img` applies one simulation (e.g., `mi
   python NeuroGlitch.py -i Sample_Data/MNI152_T1_2mm_brain.nii.gz --fixed_range fixed --sim_mode single --sim_type missing_slides --sim_img single_img --save_type 3d --remove_param 5 --axis 0
   ```
 - **Output Files**: `outputs/MNI152_T1_2mm_brain_missing_slides.nii.gz`, `outputs/MNI152_T1_2mm_brain_missing_slides.json`, `outputs/gifs/MNI152_T1_2mm_brain_missing_slides.gif`
- ![Missing Slides Example](https://github.com/ConfidenceRaymond/NIftI-SimViz/blob/main/Sample_Data/snippet.jpg)
+ ![Missing Slides Example](https://github.com/AondonaMoses/NIftI-SimViz/blob/main/Sample_Data/snippet.jpg)
 
 
 **Wrong Sequence Simulation:**
@@ -40,7 +40,7 @@ Combinining the `single mode` and `single_img` applies one simulation (e.g., `mi
   python NeuroGlitch.py -i Sample_Data/MNI152_T1_2mm_brain.nii.gz --fixed_range fixed --sim_mode single --sim_type missing_slides --sim_img single_img --save_type 3d --shuffle_param 0.3 --axis 1
   ```
 - **Output Files**: `outputs/MNI152_T1_2mm_brain_wrong_sequence.nii.gz`, `outputs/MNI152_T1_2mm_brain_wrong_sequence.json`, `outputs/gifs/MNI152_T1_2mm_brain_wrong_sequence.gif`
-![Wrong Sequence Example](https://github.com/ConfidenceRaymond/NIftI-SimViz/blob/main/Sample_Data/snippet_ws.jpg)
+![Wrong Sequence Example](https://github.com/AondonaMoses/NIftI-SimViz/blob/main/Sample_Data/snippet_ws.jpg)
 
 **Mixed Axis Simulation:**
 - **Description:** `mixed_axis`replaces a specified number or fraction of slices along a primary axis with data from auxiliary axes (resized if needed), simulating axis confusion, with targets identifying mixed positions and source axes. 
@@ -52,7 +52,7 @@ Combinining the `single mode` and `single_img` applies one simulation (e.g., `mi
   python NeuroGlitch.py -i Sample_Data/MNI152_T1_2mm_brain.nii.gz --fixed_range fixed --sim_mode single --sim_type missing_slides --sim_img single_img --save_type 3d --weight_param 0.3 --mixed_axis_list 0 1
   ```
 - **Output Files**: `outputs/MNI152_T1_2mm_brain_mixed_axis.nii.gz`, `outputs/MNI152_T1_2mm_brain_mixed_axis.json`, `outputs/gifs/MNI152_T1_2mm_brain_mixed_axis.gif`
-![Mixed Axis Example](https://github.com/ConfidenceRaymond/NIftI-SimViz/blob/main/Sample_Data/snippet_ma.jpg)
+![Mixed Axis Example](https://github.com/AondonaMoses/NIftI-SimViz/blob/main/Sample_Data/snippet_ma.jpg)
 
 **Independent Mode Multiple Simulation:**
 - **Description:** `independent` applies multiple simulations (e.g., `wrong_sequence and mixed_axis`) separately to the original data, generating distinct outputs and targets for each, allowing comparison of individual effects. This mode requires a minimum of two simulations.
